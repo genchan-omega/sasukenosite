@@ -8,7 +8,7 @@ import Footer from "@/components/FixedPart/Footer";
 
 export default function Profile() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Background 
         href = "/Profile/huji.jpg"
       />

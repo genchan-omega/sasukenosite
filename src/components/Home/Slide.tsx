@@ -7,9 +7,6 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay'; 
 
 const images = [
@@ -31,7 +28,7 @@ export default function Slide() {
       <Swiper
         modules={[Autoplay]}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -43,8 +40,8 @@ export default function Slide() {
             <div className="relative w-full min-h-screen">
               <Image
                 src={src}
-                fill
                 alt={`Slide ${index + 1}`}
+                fill
                 className="object-cover"
                 priority
               />

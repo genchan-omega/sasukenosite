@@ -71,16 +71,6 @@ export default function Contactform() {
           {status}
         </p>
       </form>
-      <div className="justify-start items-start m-4 max-w-md">
-        <h2 className="text-left font-bold text-xl">
-          [Notification]
-        </h2>
-        <p className="text-left">
-          - 送信に失敗することがあります．基本的に制作者のせいです． <br />
-          - 返信に時間がかかることがあります． 制作者のせいです．<br />
-          - 思ったような返信が得られないことがあります．制作者のせいです．
-        </p>
-      </div>
     </div>
   );
 }

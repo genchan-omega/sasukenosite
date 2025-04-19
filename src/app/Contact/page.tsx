@@ -9,7 +9,7 @@ import Footer from "@/components/FixedPart/Footer";
 
 export default function Contact() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Background 
         href = "/Contact/buildings.jpg"
       />
