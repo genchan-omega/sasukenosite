@@ -13,7 +13,7 @@ export default function Hamburger() {
   return (
     <div className="relative">
       {/* ハンバーガーボタン */}
-      <div className="mr-5 md:hidden">
+      <div className="mr-5 lg:hidden">
         <button
           className="flex flex-col justify-between w-6 h-5 z-50"
           onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +32,7 @@ export default function Hamburger() {
         </button>
       </div>
       {/* PCメニュー */}
-      <nav className="hidden md:flex md:flex-row">
+      <nav className="hidden lg:flex lg:flex-row">
         <Button title="Home" />
         <Button title="Profile" />
         <Button title="Photo" />
