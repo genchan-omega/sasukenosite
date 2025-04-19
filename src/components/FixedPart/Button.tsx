@@ -13,7 +13,7 @@ export default function Button(props: Props) {
   else
     link = `/${props.title}`;
   return (
-    <div className="relative w-30 h-20 bg-gray-800 group overflow-hidden">
+    <div className="relative w-30 h-20 group overflow-hidden">
       {/* 中身 */}
       <Link 
         href={link}

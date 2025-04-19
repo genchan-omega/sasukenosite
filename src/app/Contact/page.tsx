@@ -1,10 +1,10 @@
-// /src/app/Profile/page.tsx
+// /src/app/Contact/page.tsx
 
 import Image from "next/image";
 
 import Header from "@/components/FixedPart/Header";
 
-export default function Profile() {
+export default function Contact() {
   return (
     <div className="relative">
       <Header />

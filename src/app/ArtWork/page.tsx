@@ -1,10 +1,10 @@
-// /src/app/Profile/page.tsx
+// /src/app/ArtWork/page.tsx
 
 import Image from "next/image";
 
 import Header from "@/components/FixedPart/Header";
 
-export default function Profile() {
+export default function ArtWork() {
   return (
     <div className="relative">
       <Header />
@@ -18,7 +18,7 @@ export default function Profile() {
         />
       </div>
 
-      <h1 className="fixed top-1/2 left-1/2 -translate-1/2 text-5xl md:text-9xl z-100">
+      <h1 className="fixed top-1/2 left-1/2 -translate-1/2 text-9xl z-100">
         Sasuke Takeshita
       </h1>
 

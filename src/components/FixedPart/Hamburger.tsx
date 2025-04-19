@@ -3,6 +3,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from "next/link";
 
 import Button from "@/components/FixedPart/Button";
 
@@ -12,7 +13,7 @@ export default function Hamburger() {
   return (
     <>
       {/* ハンバーガーボタン */}
-      <div className="flex justify-end md:hidden">
+      <div className="md:hidden">
         <button
           className="flex flex-col justify-between w-6 h-5 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -38,9 +39,9 @@ export default function Hamburger() {
         isOpen ? "max-h-60 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"}`
       }>
         <nav className="flex flex-col space-y-2 mt-4 px-4">
-          <a href="#" className="py-2 hover:bg-gray-700 rounded">Home</a>
-          <a href="#" className="py-2 hover:bg-gray-700 rounded">About</a>
-          <a href="#" className="py-2 hover:bg-gray-700 rounded">Contact</a>
+          <Link href="/" className="py-2 hover:bg-gray-700 rounded">Home</Link>
+          <Link href="#" className="py-2 hover:bg-gray-700 rounded">About</Link>
+          <Link href="#" className="py-2 hover:bg-gray-700 rounded">Contact</Link>
         </nav>
       </div>
     </>
