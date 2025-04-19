@@ -19,7 +19,7 @@ export default function Photo() {
       </div>
 
       <h1 className="fixed top-1/2 left-1/2 -translate-1/2 text-5xl md:text-9xl z-100">
-        Sasuke Takeshita
+        ここはPhoto
       </h1>
 
 

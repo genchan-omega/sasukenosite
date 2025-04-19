@@ -19,7 +19,7 @@ export default function ArtWork() {
       </div>
 
       <h1 className="fixed top-1/2 left-1/2 -translate-1/2 text-9xl z-100">
-        Sasuke Takeshita
+        ここはArtWork
       </h1>
 
 
