@@ -9,10 +9,10 @@ const kaisei = Kaisei_Decol({ weight: "400", subsets: ["latin"] });
 
 export default function Header() {
 	return (
-		<header className="fixed w-full h-10 md:h-20 bg-black flex items-center justify-between z-1000">
+		<header className="fixed w-full h-16 md:h-20 bg-black flex items-center justify-between z-1000">
 			<Link
 				href="/"
-				className={`${kaisei.className} h-full flex items-center justify-center text-xl md:text-4xl`}
+				className={`${kaisei.className} h-full flex ml-3 items-center text-xl md:text-4xl`}
 			>
 				Sasukeのサイト
 			</Link>
