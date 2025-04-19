@@ -11,8 +11,6 @@ export default function Contact() {
       <Header />
       <Contactform />
 
-
-
     </div>
   );
 }

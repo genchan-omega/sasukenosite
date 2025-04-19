@@ -7,7 +7,7 @@ export default function Name() {
     <main className="fixed top-0 left-0 w-full h-screen -z-1 flex flex-col md:flex-row justify-center items-center gap-10">
       <div className="relative w-[300px] h-[300px] shrink-0">
         <Image
-          src="/dummy.png"
+          src="/Profile/Profile.jpg"
           alt="Picture of Author"
           fill
           className="object-cover rounded-full"
