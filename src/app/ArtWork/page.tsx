@@ -11,7 +11,7 @@ export default function ArtWork() {
 
       <div className="fixed min-h-screen min-w-screen overflow-hidden z-10">
         <Image
-          src="/dummy.png"
+          src="/Others/dummy.png"
           fill
           alt="Picture of the article"
           className="object-cover"

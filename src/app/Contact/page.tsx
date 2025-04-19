@@ -2,15 +2,20 @@
 
 // import Image from "next/image";
 
-import Contactform from "@/components/Contact/Contactform";
+import Background from "@/components/FixedPart/Background";
 import Header from "@/components/FixedPart/Header";
+import Contactform from "@/components/Contact/Contactform";
+import Footer from "@/components/FixedPart/Footer";
 
 export default function Contact() {
   return (
-    <div className="relative">
+    <div>
+      <Background 
+        href = "/Contact/buildings.jpg"
+      />
       <Header />
       <Contactform />
-
+      <Footer />
     </div>
   );
 }
