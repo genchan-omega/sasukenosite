@@ -21,13 +21,13 @@ export default function Hamburger() {
         >
           <span 
             className={`block h-0.5 bg-white transition duration-300 z-50
-            ${isOpen ? "rotate-45 translate-y-2" : ""}`}
+            ${isOpen ? "opacity-0" : ""}`}
           ></span>
           <span className={`block h-0.5 bg-white transition duration-300 z-50
             ${isOpen ? "opacity-0" : ""}`}
           ></span>
           <span className={`block h-0.5 bg-white transition duration-300 z-50
-            ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            ${isOpen ? "opacity-0" : ""}`}
           ></span>
         </button>
       </div>
@@ -46,11 +46,21 @@ export default function Hamburger() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`} 
       >
-        <Link href="/" className="py-2 hover:bg-gray-700 rounded">Home</Link>
-        <Link href="/Profile" className="py-2 hover:bg-gray-700 rounded">Profile</Link>
-        <Link href="/Photo" className="py-2 hover:bg-gray-700 rounded">Photo</Link>
-        <Link href="/ArtWork" className="py-2 hover:bg-gray-700 rounded">ArtWork</Link>
-        <Link href="/Contact" className="py-2 hover:bg-gray-700 rounded">Contact</Link>
+        <Link href="/" className="flex-1 flex items-center justify-center text-2xl border-y-2 border-dashed hover:bg-gray-900 transition duration-300">
+          Home
+        </Link>
+        <Link href="/Profile" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
+          Profile
+        </Link>
+        <Link href="/Photo" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
+          Photo
+        </Link>
+        <Link href="/ArtWork" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
+          ArtWork
+        </Link>
+        <Link href="/Contact" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
+          Contact
+        </Link>
       </nav>
       {/* オーバーレイ */}
       <div
