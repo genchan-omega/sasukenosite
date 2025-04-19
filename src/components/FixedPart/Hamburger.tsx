@@ -40,8 +40,10 @@ export default function Hamburger() {
       }>
         <nav className="flex flex-col space-y-2 mt-4 px-4">
           <Link href="/" className="py-2 hover:bg-gray-700 rounded">Home</Link>
-          <Link href="#" className="py-2 hover:bg-gray-700 rounded">About</Link>
-          <Link href="#" className="py-2 hover:bg-gray-700 rounded">Contact</Link>
+          <Link href="/Profile" className="py-2 hover:bg-gray-700 rounded">Profile</Link>
+          <Link href="/Photo" className="py-2 hover:bg-gray-700 rounded">Photo</Link>
+          <Link href="/ArtWork" className="py-2 hover:bg-gray-700 rounded">ArtWork</Link>
+          <Link href="/Contact" className="py-2 hover:bg-gray-700 rounded">Contact</Link>
         </nav>
       </div>
     </>
