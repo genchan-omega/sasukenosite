@@ -10,7 +10,7 @@ export default function Profile() {
   return (
     <div className="flex flex-col min-h-screen">
       <Background 
-        href = "/Profile/huji.jpg"
+        href = "/Profile/sun.jpg"
       />
       <Header />
       <Name />

@@ -12,13 +12,14 @@ import 'swiper/css/autoplay';
 const images = [
   "/Home/bird.jpg",
   "/Home/bird2.jpg",
+  "/Home/buildings.jpg",
   "/Home/castle.jpg",
   "/Home/fish.jpg",
   "/Home/flower.jpg",
+  "/Home/huji.jpg",
   "/Home/moon.jpg",
   "/Home/park.jpg",
   "/Home/river.jpg",
-  "/Home/sun.jpg",
   "/Home/traffic.jpg",
 ]
 
