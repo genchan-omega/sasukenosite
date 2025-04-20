@@ -19,7 +19,6 @@ const images = [
   "/Home/huji.jpg",
   "/Home/moon.jpg",
   "/Home/park.jpg",
-  "/Home/river.jpg",
   "/Home/traffic.jpg",
 ]
 
