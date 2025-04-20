@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Name() {
   return (
-    <main className="fixed top-0 left-0 w-full h-screen -z-1 flex flex-col md:flex-row justify-center items-center gap-10">
-      <div className="relative w-[300px] h-[300px] shrink-0">
+    <main className="fixed top-0 left-0 w-full h-screen -z-1 flex flex-col md:flex-row justify-center items-center ">
+      <div className="relative w-[300px] h-[300px] shrink-0 mx-5">
         <Image
           src="/Profile/Profile.jpg"
           alt="Picture of Author"
@@ -19,4 +19,3 @@ export default function Name() {
     </main>
   );
 }
-
