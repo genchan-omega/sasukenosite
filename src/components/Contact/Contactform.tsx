@@ -37,6 +37,9 @@ export default function Contactform() {
   
   return (
     <div className="flex flex-col flex-1 items-center pt-30">
+      <h2 className="text-3xl">
+      お問い合わせフォーム
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4">
         <input
           type="text"
@@ -71,6 +74,7 @@ export default function Contactform() {
           {status}
         </p>
       </form>
+
     </div>
   );
 }

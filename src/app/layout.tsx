@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP } from "next/font/google";
+import { BIZ_UDMincho } from "next/font/google";
 import "./globals.css";
 
-const notoserif = Noto_Serif_JP({weight: "400", subsets: ["latin"]});
+const bizmincho = BIZ_UDMincho({weight: "400", subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${notoserif.className}`}
+        className={`${bizmincho.className}`}
       >
         {children}
       </body>

@@ -21,9 +21,9 @@ export default function Button(props: Props) {
         {props.title}
       </Link>
       <span className="absolute top-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:delay-[0ms]"></span>
-      <span className="absolute top-0 right-0 w-0.5 h-0 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full group-hover:delay-[150ms]"></span>
-      <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:delay-[300ms]"></span>
-      <span className="absolute bottom-0 left-0 w-0.5 h-0 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:h-full group-hover:delay-[450ms]"></span>
+      <span className="absolute top-0 right-0 w-0.5 h-0 bg-white transition-all duration-400 opacity-0 group-hover:opacity-100 group-hover:h-full group-hover:delay-[0ms]"></span>
+      <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:delay-[0ms]"></span>
+      <span className="absolute bottom-0 left-0 w-0.5 h-0 bg-white transition-all duration-400 opacity-0 group-hover:opacity-100 group-hover:h-full group-hover:delay-[0ms]"></span>
     </div>
   );
 }
