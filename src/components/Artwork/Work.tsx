@@ -14,7 +14,7 @@ export default function Work(props: Props) {
       className="relative border-2">
       <figure className="relative w-[80vh] h-60 opacity-50">
         <Image
-          src="/Artwork/Amazon/forest.jpg"
+          src="/ArtWork/Amazon/forest.jpg"
           alt="ok"
           fill
           className="object-cover"
