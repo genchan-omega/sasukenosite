@@ -9,7 +9,7 @@ export default function ArtWork() {
   return (
     <div className="flex flex-col min-h-screen">
       <Background 
-        href = "/Artwork/index/couple.jpg"
+        href = "/ArtWork/index/couple.jpg"
       />
       <Header />
       <Works />
