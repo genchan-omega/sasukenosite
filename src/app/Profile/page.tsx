@@ -3,7 +3,6 @@
 import Background from "@/components/FixedPart/Background";
 import Header from "@/components/FixedPart/Header";
 import Name from "@/components/Profile/Name";
-import Contents from "@/components/Profile/Contents";
 import Footer from "@/components/FixedPart/Footer";
 
 export default function Profile() {
@@ -14,7 +13,6 @@ export default function Profile() {
       />
       <Header />
       <Name />
-      <Contents />
       <Footer />
     </div>
   );
