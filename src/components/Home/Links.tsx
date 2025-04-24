@@ -47,7 +47,7 @@ export default function Links() {
             Introduce myself
           </p>
           <Link
-            href="/profile"
+            href="/Profile"
             className="block text-center text-4xl border-2 border-red-600 p-4"
           >
             Go there!!!  →
@@ -71,7 +71,7 @@ export default function Links() {
             Single photos taken so far
           </p>
           <Link
-            href="/photo"
+            href="/Photo"
             className="block text-center text-4xl border-2 border-red-600 p-4"
           >
             Go there!!!  →
@@ -95,7 +95,7 @@ export default function Links() {
             A group of works composed of photographs
           </p>
           <Link
-            href="/photo"
+            href="/ArtWork"
             className="block text-center text-4xl border-2 border-red-600 p-4"
           >
             Go there!!!  →
@@ -119,7 +119,7 @@ export default function Links() {
             What connects you and me
           </p>
           <Link
-            href="/photo"
+            href="/Contact"
             className="block text-center text-4xl border-2 border-red-600 p-4"
           >
             Go there!!!  →
