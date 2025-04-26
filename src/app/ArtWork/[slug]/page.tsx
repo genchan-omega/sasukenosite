@@ -4,13 +4,6 @@ import Footer from "@/components/FixedPart/Footer";
 import Header from "@/components/FixedPart/Header";
 import Image from "next/image";
 
-
-// interface PageProps {
-//   params: {
-//     slug: string;
-//   };
-// }
-
 export function generateStaticParams() {
   return [
     { slug: "amazon" },
@@ -18,7 +11,6 @@ export function generateStaticParams() {
     { slug: "seijo" },
   ];
 }
-
 
 export default async function ArtworkPage({
   params,
