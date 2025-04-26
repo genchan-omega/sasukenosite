@@ -32,7 +32,7 @@ export default async function ArtWorkPage({
   const nightImages = Array.from({ length: 16 }, (_, i) => `/ArtWork/Night/${i + 1}.jpg`);
   // capital用の画像リスト
   const capitalImages = Array.from({ length: 48 }, (_, i) => `/ArtWork/Capital/${i + 1}.jpg`);
-  const synchronicityImages = Array.from({ length: 48 }, (_, i) => `/ArtWork/Synchronicity/${i + 1}.jpg`);
+  const synchronicityImages = Array.from({ length: 19 }, (_, i) => `/ArtWork/Synchronicity/${i + 1}.jpg`);
 
   return (
     <div>
