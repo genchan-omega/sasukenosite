@@ -16,7 +16,7 @@ export default function Work({ title, href }: Props) {
 		>
 			<figure className="relative w-full h-40 opacity-50">
 				<Image
-					src="/ArtWork/Amazon/forest.jpg"
+					src="/ArtWork/forest.jpg"
 					alt="ok"
 					fill
 					className="object-cover"
