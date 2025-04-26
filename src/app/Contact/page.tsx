@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
       <Background 
-        href = "/Contact/boat.jpg"
+        href = "/Contact/bg.jpg"
       />
       <Header />
       <Subtitle 

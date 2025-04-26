@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Name() {
   return (
     <figure className="w-full mx-auto flex flex-1 flex-col md:flex-row justify-center items-center gap-5">
-        <div className="relative w-70 h-120">
+        <div className="relative w-70 h-120 border-2">
         <Image
           src="/Profile/Profile.jpg"
           alt="Picture of Author"
