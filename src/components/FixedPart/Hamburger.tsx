@@ -13,12 +13,12 @@ export default function Hamburger() {
   return (
     <div className="relative">
       {/* ハンバーガーボタン */}
-      <div className="mr-5 lg:hidden p-3 hover:bg-gray-700 transition duration-300 rounded-xl hover:cursor-pointer">
-        <button
-          className="flex flex-col justify-between w-6 h-5 z-50 hover:cursor-pointer"
+      <button
+          className="mr-2 lg:hidden p-3 transition duration-300 rounded-xl hover:cursor-pointer hover:bg-gray-700"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
-        >
+      >
+        <div className="flex flex-col justify-between w-6 h-5 z-50 hover:cursor-pointer">
           <span 
             className={`block h-0.5 bg-white transition duration-300 z-50
             ${isOpen ? "opacity-0" : ""}`}
@@ -29,8 +29,8 @@ export default function Hamburger() {
           <span className={`block h-0.5 bg-white transition duration-300 z-50
             ${isOpen ? "opacity-0" : ""}`}
           ></span>
-        </button>
-      </div>
+        </div>
+      </button>
       {/* PCメニュー */}
       <nav className="hidden lg:flex lg:flex-row">
         <Button title="Home" />

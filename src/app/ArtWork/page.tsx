@@ -3,7 +3,8 @@
 import Header from "@/components/FixedPart/Header";
 import Footer from "@/components/FixedPart/Footer";
 import Background from "@/components/FixedPart/Background";
-import Works from "@/components/Artwork/Works";
+import Works from "@/components/ArtWork/Works";
+import Subtitle from "@/components/FixedPart/Subtitle";
 
 export default function ArtWork() {
   return (
@@ -12,6 +13,9 @@ export default function ArtWork() {
         href = "/ArtWork/bg.jpg"
       />
       <Header />
+      <Subtitle
+        name="ArtWork"
+      />
       <Works />
       <Footer />
     </div>

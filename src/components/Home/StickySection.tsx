@@ -1,3 +1,5 @@
+// /src/app/components/Home/StickySection.tsx
+
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -7,6 +9,7 @@ type Props = {
   description: string;
   href: string;
   buttonLabel: string;
+  buttonBg: string;
   gradient: string;
   imagePositions?: {
     src: string;
@@ -20,13 +23,13 @@ export default function StickySection({
   description,
   href,
   buttonLabel,
+  buttonBg,
   gradient,
   imagePositions = [],
   children,
 }: Props) {
   return (
     <section className={`sticky top-0 w-full h-screen ${gradient} z-2 overflow-hidden`}>
-      {/* 背景画像など */}
       {imagePositions.map((img, index) => (
         <div key={index} className={`absolute ${img.className}`}>
           <Image
@@ -38,28 +41,23 @@ export default function StickySection({
         </div>
       ))}
 
-      {/* 中央テキスト */}
       <div className="absolute z-3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
         <h2 className="text-7xl md:text-9xl text-center">{title}</h2>
         <p className="text-center text-3xl pb-5 px-2">{description}</p>
         <Link href={href}>
-          <div className="relative w-full md:w-100 mx-auto text-center text-4xl border-2 border-cyan-200 bg-gray-700 hover:opacity-80 transition duration-300 overflow-hidden p-4">
-            {/* 背景画像 */}
+          <div className="relative w-full md:w-100 mx-auto text-center text-4xl border-2 border-cyan-200 bg-purple-700 hover:scale-110 transition duration-300 overflow-hidden p-4 group">
             <Image
-              src="/Profile/Profile.jpg"
+              src={buttonBg}
               fill
               alt="Button Background"
-              className="object-cover absolute top-0 left-0 z-0 opacity-50"
+              className="object-cover absolute top-0 left-0 z-0 group-hover:opacity-50 transition duration-300"
             />
-            {/* テキスト（上に重ねる） */}
-            <span className="relative z-10 text-white"> 
+            <span className="relative z-10">
               {buttonLabel} →
             </span>
           </div>
         </Link>
       </div>
-
-      {/* その他の要素 (例えばFooterなど) */}
       {children}
     </section>
   );
