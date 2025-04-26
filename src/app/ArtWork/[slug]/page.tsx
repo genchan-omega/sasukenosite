@@ -12,7 +12,7 @@ export function generateStaticParams() {
   ];
 }
 
-export default async function ArtworkPage({
+export default async function ArtWorkPage({
   params,
 }: {
   params: Promise<{ slug: string }>
