@@ -30,9 +30,9 @@ export default function Gallery() {
   return (
     <>
       {/* 一覧表示 */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-3 gap-4 p-4">
         {images.map((src, index) => (
-          <div key={index} className="cursor-pointer overflow-hidden">
+          <div key={index} className="cursor-pointer overflow-hidden border-2">
             <Image
               src={src}
               alt={`Gallery Image ${index}`}
