@@ -9,10 +9,10 @@ export default function Works() {
         title="Amazon"
       />
       <Work 
-        title="Amazon"
+        title="Street"
       />
       <Work 
-        title="Amazon"
+        title="清浄の祈り"
       />
     </div>
   );

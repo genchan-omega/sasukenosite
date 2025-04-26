@@ -1,20 +1,23 @@
 // /src/components/FixedPart/Header.tsx
 
 import Link from "next/link";
+import Image from "next/image";
 
 import Hamburger from "@/components/FixedPart/Hamburger";
-
-import { Kaisei_Decol } from "next/font/google";
-const ibmplex = Kaisei_Decol({ weight: "400", subsets: ["latin"] });
 
 export default function Header() {
 	return (
 		<header className="fixed w-full h-16 md:h-20 bg-black flex items-center justify-between z-1000">
 			<Link
 				href="/"
-				className={`${ibmplex.className} h-full flex ml-3 items-center text-xl md:text-4xl`}
+				className="relative h-16 md:h-20 w-16 md:w-20"
 			>
-				ロゴ
+        <Image
+          src="/Others/logo.png"
+          fill
+          alt="Picture of the instagram"
+          className="object-contain transition duration-500"
+        />
 			</Link>
 			<Hamburger />
 		</header>

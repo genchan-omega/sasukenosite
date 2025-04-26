@@ -13,9 +13,9 @@ export default function Hamburger() {
   return (
     <div className="relative">
       {/* ハンバーガーボタン */}
-      <div className="mr-5 lg:hidden">
+      <div className="mr-5 lg:hidden p-3 hover:bg-gray-700 transition duration-300 rounded-xl hover:cursor-pointer">
         <button
-          className="flex flex-col justify-between w-6 h-5 z-50"
+          className="flex flex-col justify-between w-6 h-5 z-50 hover:cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
