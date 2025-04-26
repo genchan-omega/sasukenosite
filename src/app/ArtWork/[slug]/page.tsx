@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export function generateStaticParams() {
   return [
-    { slug: "amazon" },
-    { slug: "street" },
+    // { slug: "amazon" },
+    // { slug: "street" },
     { slug: "seijo" },
   ];
 }
