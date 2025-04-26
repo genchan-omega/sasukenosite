@@ -6,11 +6,11 @@ import StickySection from "@/components/Home/StickySection";
 export default function Links() {
 	return (
 		<>
-			<StickySection
+			{/* <StickySection
 				title="Home"
 				description="Fly away to different worlds"
 				href="/"
-				buttonLabel="Go there!!!"
+				buttonLabel="Enter"
 				buttonBg="/Home/Slide/bird.jpg"
 				gradient="bg-gradient-to-b from-black to-purple-900"
 				imagePositions={[
@@ -24,15 +24,14 @@ export default function Links() {
 						className: "top-3/5 left-1/6 w-64 h-64 -rotate-12 border-2",
 					},
 				]}
-			/>
-
+			/> */}
 			<StickySection
 				title="Profile"
 				description="Introduce myself"
 				href="/Profile"
-				buttonLabel="Go there!!!"
-				buttonBg="/Profile/Profile.jpg"
-				gradient="bg-gradient-to-b from-black to-white"
+				buttonLabel="Enter"
+				buttonBg="/Home/Button/Profile.jpg"
+				gradient="bg-gradient-to-b from-black to-cyan-500"
 				imagePositions={[
 					{
 						src: "/Home/bg_image/3.jpg",
@@ -50,9 +49,9 @@ export default function Links() {
 				title="Photo"
 				description="Single photos taken so far"
 				href="/Photo"
-				buttonLabel="Go there!!!"
+				buttonLabel="Enter"
 				buttonBg="/Photo/bg.jpg"
-				gradient="bg-gradient-to-b from-black to-blue-900"
+				gradient="bg-gradient-to-b from-black to-[#ff00ff]"
 				imagePositions={[
 					{
 						src: "/Home/bg_image/5.jpg",
@@ -70,9 +69,9 @@ export default function Links() {
 				title="Artwork"
 				description="A group of works composed of photographs"
 				href="/ArtWork"
-				buttonLabel="Go there!!!"
+				buttonLabel="Enter"
 				buttonBg="/ArtWork/bg.jpg"
-				gradient="bg-gradient-to-b from-black to-rose-700"
+				gradient="bg-gradient-to-b from-black to-yellow-400"
 				imagePositions={[
 					{
 						src: "/Home/bg_image/7.jpg",
@@ -90,9 +89,9 @@ export default function Links() {
 				title="Contact"
 				description="What connects you and me"
 				href="/Contact"
-				buttonLabel="Go there!!!"
-				buttonBg="/Contact/bg.jpg"
-				gradient="bg-gradient-to-b from-black to-green-700"
+				buttonLabel="Enter"
+				buttonBg="/Home/Button/Contact.jpg"
+				gradient="bg-gradient-to-b from-black to-white"
 				imagePositions={[
 					{
 						src: "/Home/bird.jpg",
