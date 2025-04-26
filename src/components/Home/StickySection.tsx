@@ -39,14 +39,23 @@ export default function StickySection({
       ))}
 
       {/* 中央テキスト */}
-      <div className="absolute z-3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <h2 className="text-9xl text-center">{title}</h2>
-        <p className="text-center text-3xl pb-5">{description}</p>
-        <Link
-          href={href}
-          className="block text-center text-4xl border-2 p-4 border-red-600 bg-rose-900 hover:bg-rose-200 hover:text-rose-900 transition duration-300"
-        >
-          {buttonLabel} →
+      <div className="absolute z-3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+        <h2 className="text-7xl md:text-9xl text-center">{title}</h2>
+        <p className="text-center text-3xl pb-5 px-2">{description}</p>
+        <Link href={href}>
+          <div className="relative w-full md:w-100 mx-auto text-center text-4xl border-2 border-cyan-200 bg-gray-700 hover:opacity-80 transition duration-300 overflow-hidden p-4">
+            {/* 背景画像 */}
+            <Image
+              src="/Profile/Profile.jpg"
+              fill
+              alt="Button Background"
+              className="object-cover absolute top-0 left-0 z-0 opacity-50"
+            />
+            {/* テキスト（上に重ねる） */}
+            <span className="relative z-10 text-white"> 
+              {buttonLabel} →
+            </span>
+          </div>
         </Link>
       </div>
 
