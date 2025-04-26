@@ -13,7 +13,7 @@ export default function Work({ title, link_href, bg_href }: Props) {
 	return (
 		<Link
 			href={link_href}
-			className="relative w-full md:w-200 h-30 md:h-40 border-2 overflow-hidden hover:scale-105 hover:-translate-y-2 hover:shadow-lg transition duration-200 group"
+			className="relative w-full md:w-200 h-30 md:h-40 border-2 overflow-hidden hover:scale-105 hover:-translate-y-2 hover:shadow-lg transition duration-200 bg-black group"
 		>
 			<figure className="relative w-full h-40 opacity-50">
 				<Image

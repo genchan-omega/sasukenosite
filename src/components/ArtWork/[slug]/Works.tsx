@@ -21,6 +21,16 @@ export default function Works() {
         link_href="/ArtWork/seijo"
         bg_href="/ArtWork/Button/Seijo.jpg"
       />
+      <Work
+        title="独りよがりの夜"
+        link_href="/ArtWork/night"
+        bg_href="/ArtWork/Button/Night.jpg"
+      />
+      <Work
+        title="古都"
+        link_href="/ArtWork/night"
+        bg_href="/ArtWork/Button/Capital.jpg"
+      />
 		</div>
 	);
 }

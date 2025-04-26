@@ -1,8 +1,8 @@
 // /src/components/FixedPart/Header.tsx
 
-import {Chocolate_Classical_Sans} from 'next/font/google';
+import {Lora} from 'next/font/google';
 
-const calsans = Chocolate_Classical_Sans  ({weight: '400', subsets:['latin']});
+const calsans = Lora  ({weight: '700', subsets:['latin']});
 
 interface Props {
   name: string;
@@ -10,7 +10,7 @@ interface Props {
 
 export default function Subtitile(props: Props) {
   return (
-    <h1 className={`${calsans.className} pt-20 pb-20 font-bold text-7xl text-center`}>
+    <h1 className={`${calsans.className} pt-10 pb-10 font-bold text-7xl text-center text-black mt-20`}>
       {props.name}
     </h1>
   );

@@ -13,7 +13,7 @@ export default function Background(props: Props) {
         src={props.href}
         fill
         alt="Picture of the article"
-        className="object-cover opacity-30"
+        className="object-cover"
       />
     </div>
 	);
