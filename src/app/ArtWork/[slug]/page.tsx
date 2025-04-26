@@ -7,8 +7,11 @@ import Image from "next/image";
 export function generateStaticParams() {
   return [
     { slug: "amazon" },
-    // { slug: "street" },
+    { slug: "street" },
     { slug: "seijo" },
+    { slug: "night" },
+    { slug: "capital" },
+    { slug: "synchronicity" }
   ];
 }
 
@@ -29,6 +32,7 @@ export default async function ArtWorkPage({
   const nightImages = Array.from({ length: 16 }, (_, i) => `/ArtWork/Night/${i + 1}.jpg`);
   // capital用の画像リスト
   const capitalImages = Array.from({ length: 48 }, (_, i) => `/ArtWork/Capital/${i + 1}.jpg`);
+  const synchronicityImages = Array.from({ length: 48 }, (_, i) => `/ArtWork/Synchronicity/${i + 1}.jpg`);
 
   return (
     <div>
@@ -107,6 +111,22 @@ export default async function ArtWorkPage({
                 <Image
                   src={src}
                   alt={`Capital Image ${index}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* synchronity */}
+        {slug === "synchronicity" && (
+          <div className="flex flex-col gap-8 w-full">
+            {synchronicityImages.map((src, index) => (
+              <div key={index} className="relative w-full h-[500px]">
+                <Image
+                  src={src}
+                  alt={`synchronicity Image ${index}`}
                   fill
                   className="object-contain"
                 />

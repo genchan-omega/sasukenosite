@@ -28,8 +28,13 @@ export default function Works() {
       />
       <Work
         title="古都"
-        link_href="/ArtWork/night"
+        link_href="/ArtWork/capital"
         bg_href="/ArtWork/Button/Capital.jpg"
+      />
+      <Work
+        title="Synchronity"
+        link_href="/ArtWork/synchronicity"
+        bg_href="/ArtWork/Button/Synchronicity.jpg"
       />
 		</div>
 	);
