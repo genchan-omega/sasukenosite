@@ -10,16 +10,14 @@ import 'swiper/css';
 import 'swiper/css/autoplay'; 
 
 const images = [
-  "/Home/Slide/bird.jpg",
-  "/Home/Slide/bird2.jpg",
-  "/Home/Slide/buildings.jpg",
-  "/Home/Slide/castle.jpg",
-  "/Home/Slide/fish.jpg",
-  "/Home/Slide/flower.jpg",
-  "/Home/Slide/huji.jpg",
-  "/Home/Slide/moon.jpg",
-  "/Home/Slide/park.jpg",
-  "/Home/Slide/traffic.jpg",
+  "/Home/Slide/1.jpg",
+  "/Home/Slide/2.jpg",
+  "/Home/Slide/3.jpg",
+  "/Home/Slide/4.jpg",
+  "/Home/Slide/5.jpg",
+  "/Home/Slide/6.jpg",
+  "/Home/Slide/7.jpg",
+  "/Home/Slide/8.jpg",
 ]
 
 export default function Slide() {
