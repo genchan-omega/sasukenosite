@@ -6,25 +6,6 @@ import StickySection from "@/components/Home/StickySection";
 export default function Links() {
 	return (
 		<>
-			{/* <StickySection
-				title="Home"
-				description="Fly away to different worlds"
-				href="/"
-				buttonLabel="Enter"
-				buttonBg="/Home/Slide/bird.jpg"
-				gradient="bg-gradient-to-b from-black to-purple-900"
-				imagePositions={[
-					{
-						src: "/Home/bg_image/1.jpg",
-						className:
-							"top-1/4 left-2/3 -translate-x-1/4 -translate-y-2/3 w-64 h-80 rotate-12 border-2",
-					},
-					{
-						src: "/Home/bg_image/2.jpg",
-						className: "top-3/5 left-1/6 w-64 h-64 -rotate-12 border-2",
-					},
-				]}
-			/> */}
 			<StickySection
 				title="Profile"
 				description="Introduce myself"
@@ -56,11 +37,12 @@ export default function Links() {
 					{
 						src: "/Home/bg_image/5.jpg",
 						className:
-							"top-1/4 left-2/3 -translate-x-1/4 -translate-y-2/3 w-64 h-64 rotate-12 border-2",
+							"left-4/5 top-1/5 -translate-x-4/5 -translate-y-1/5 w-64 h-100 rotate-12 border-2",
 					},
 					{
 						src: "/Home/bg_image/6.jpg",
-						className: "top-3/5 left-1/6 w-64 h-64 -rotate-12 border-2",
+						className:
+							"left-1/6 top-4/5 -translate-x-1/6 -translate-y-4/5 w-64 h-100 -rotate-12 border-2",
 					},
 				]}
 			/>

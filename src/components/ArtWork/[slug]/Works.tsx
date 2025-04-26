@@ -32,7 +32,7 @@ export default function Works() {
         bg_href="/ArtWork/Button/Capital.jpg"
       />
       <Work
-        title="Synchronity"
+        title="Synchronicity"
         link_href="/ArtWork/synchronicity"
         bg_href="/ArtWork/Button/Synchronicity.jpg"
       />

@@ -46,7 +46,10 @@ export default function StickySection({
         <p className="text-center text-3xl pb-5 px-2">
           {description}
         </p>
-        <Link href={href}>
+        <Link
+          href={href}
+          className="block w-65 md:w-100 mx-auto"
+        >
           <div className="relative w-65 md:w-100 h-20 mx-auto text-center text-4xl border-2 border-cyan-200 bg-purple-700 hover:scale-110 transition duration-300 overflow-hidden p-4 group">
             <Image
               src={buttonBg}

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative z-100 w-full py-4 border-t flex flex-col gap-5">
+    <footer className="relative z-100 w-full py-4 border-t flex flex-col gap-5 bg-black">
       <div className="flex flex-row w-full justify-center items-center">
         <a
           href="https://www.instagram.com/photo_t.s0404/"

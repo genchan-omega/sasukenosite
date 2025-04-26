@@ -31,7 +31,7 @@ export default function Contactform() {
       setFormData({ name: "", email: "", message: "" });
     }
     else{
-      setStatus("Failed, please try agein.");
+      setStatus("Failed, please try again.");
     }
   };
   
@@ -44,7 +44,7 @@ export default function Contactform() {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full h-10 border p-2 rounded"
+          className="w-full h-10 border-4 p-2 rounded text-black backdrop-blur-sm"
           required
         />
         <input
@@ -53,7 +53,7 @@ export default function Contactform() {
           placeholder="Mail Address"
           value={formData.email}
           onChange={handleChange}
-          className="w-full h-10 border p-2 rounded"
+          className="w-full h-10 border-4 p-2 rounded text-black backdrop-blur-sm"
           required
         />
         <textarea
@@ -61,10 +61,10 @@ export default function Contactform() {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full h-30 border p-2 rounded"
+          className="w-full h-30 border-4 p-2 rounded text-black backdrop-blur-sm"
           required
         />
-        <button type="submit" className="w-full text-xl font-bold border-2 border-rose-100 hover:bg-gray-200 hover:text-black hover:opacity-50 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-500">
+        <button type="submit" className="w-full text-xl font-bold border-4 border-rose-300 hover:bg-rose-100 hover:text-black hover:opacity-50 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-500 backdrop-blur-sm">
           Submit
         </button>
         <p>

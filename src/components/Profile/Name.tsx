@@ -13,7 +13,7 @@ export default function Name() {
           className="object-cover"
         />
       </div>
-      <figcaption className="flex flex-col w-110">
+      <figcaption className="flex flex-col w-80 md:w-110">
         <h2 className="text-4xl md:text-6xl text-center py-4">
           Sasuke Takeshita
         </h2>
