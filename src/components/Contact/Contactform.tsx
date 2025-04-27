@@ -67,7 +67,7 @@ export default function Contactform() {
         <button type="submit" className="w-full text-xl font-bold border-4 border-rose-300 bg-rose-100 text-black hover:bg-rose-200 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-500 backdrop-blur-sm">
           Submit
         </button>
-        <p>
+        <p className="text-black text-center backdrop-blur-sm">
           {status}
         </p>
       </form>

@@ -36,8 +36,8 @@ export default async function ArtWorkPage({
 	return (
 		<div>
 			<Header />
-			<div className="h-screen pt-30 flex flex-col items-center justify-center p-8 bg-white">
-				<div className="w-full max-w-5xl h-full">
+			<div className="h-screen w-full pt-30 flex flex-col items-center justify-center p-8 bg-white">
+				<div className="w-full h-full">
 					<Slide images={images} slug={slug} />
 				</div>
 			</div>

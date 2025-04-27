@@ -10,7 +10,7 @@ interface Props {
 
 export default function Subtitile(props: Props) {
   return (
-    <h1 className={`${calsans.className} pt-10 pb-10 font-bold text-7xl text-center text-black mt-20`}>
+    <h1 className={`${calsans.className} pt-10 pb-10 font-bold text-7xl text-center text-black mt-20 flex justify-center items-center`}>
       {props.name}
     </h1>
   );
