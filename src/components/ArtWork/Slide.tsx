@@ -20,7 +20,6 @@ export default function SwiperViewer({
 			modules={[Navigation, Scrollbar]}
 			spaceBetween={30}
 			slidesPerView={1}
-			// centeredSlides
 			navigation={{
 				prevEl: ".prev",
 				nextEl: ".next",
