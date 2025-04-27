@@ -64,14 +64,13 @@ export default function Contactform() {
           className="w-full h-30 border-4 p-2 rounded text-black backdrop-blur-sm"
           required
         />
-        <button type="submit" className="w-full text-xl font-bold border-4 border-rose-300 hover:bg-rose-100 hover:text-black hover:opacity-50 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-500 backdrop-blur-sm">
+        <button type="submit" className="w-full text-xl font-bold border-4 border-rose-300 bg-rose-100 text-black hover:bg-rose-200 hover:cursor-pointer shadow-md px-4 py-2 rounded transition duration-500 backdrop-blur-sm">
           Submit
         </button>
         <p>
           {status}
         </p>
       </form>
-
     </div>
   );
 }
