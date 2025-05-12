@@ -11,16 +11,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/bundle";
 
-const images = [
-	{ src: "/Photo/1.jpg", tags: [""] },
-	{ src: "/Photo/2.jpg", tags: ["", "People"] },
-	{ src: "/Photo/3.jpg", tags: ["", "Scenery"] },
-	{ src: "/Photo/4.jpg", tags: ["", "People"] },
-];
+const tagImageCounts: Record<string, number> = {
+  Landscape: 46,
+  Overseas: 27,
+  Snap: 30,
+  Animals: 43,
+  Birds: 46,
+  Nature: 39,
+};
+
+const images = Object.entries(tagImageCounts).flatMap(([tag, count]) =>
+  Array.from({ length: count }, (_, i) => ({
+    src: `/Photo/${tag}/${i + 1}.jpg`,
+    tag,
+  }))
+);
 
 export default function Gallery() {
 	// タグ
-	const tags = ["All", "People", "Scenery", "Others"];
+	const tags = ["All", "Landscape", "Overseas", "Snap", "Animals", "Birds", "Nature"];
 	const [selectedImg, setSelectedImg] = useState<string | null>(null);
 	const [filter, setFilter] = useState<string>("All");
 
@@ -38,6 +47,7 @@ export default function Gallery() {
 
 	return (
 		<section className="flex flex-col flex-1">
+      {/* 絞り込み部分 */}
 			<Field className="flex flex-col justify-center items-center gap-4 text-black">
 				<Select
 					name="tag-filter"
@@ -57,11 +67,11 @@ export default function Gallery() {
 			{/* 一覧表示 */}
 			<div className="grid grid-cols-3 p-4 w-full md:w-[60vw] mx-auto">
 				{images
-					.filter((image) => filter === "All" || image.tags.includes(filter))
+					.filter((image) => filter === "All" || image.tag === filter)
 					.map((image, index) => (
 						<div
 							key={index}
-							className="relative aspect-[3/4] cursor-pointer overflow-hidden border-2"
+							className="relative aspect-[3/4] md:aspect-[4/3] cursor-pointer overflow-hidden border-2"
 						>
 							<Image
 								src={image.src}

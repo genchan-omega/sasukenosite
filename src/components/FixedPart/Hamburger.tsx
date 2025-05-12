@@ -3,12 +3,13 @@
 "use client";
 
 import { useState } from 'react';
-import Link from "next/link";
 
 import Button from "@/components/FixedPart/Button";
+import MobileMenuLink from './MobileMenuLink';
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <div className="relative">
@@ -46,7 +47,7 @@ export default function Hamburger() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`} 
       >
-        <div className="flex items-center justify-end border-dashed mr-2"
+        <div className="flex items-center justify-end border-b-2 border-dashed pr-2"
         >
           <button
             className="text-5xl m-2 hover:bg-gray-700 transition duration-300 hover:cursor-pointer rounded-md"
@@ -54,28 +55,18 @@ export default function Hamburger() {
             &times;
           </button>
         </div>
-        <Link href="/" className="flex-1 flex items-center justify-center text-2xl border-y-2 border-dashed hover:bg-gray-900 transition duration-300">
-          Home
-        </Link>
-        <Link href="/Profile" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
-          Profile
-        </Link>
-        <Link href="/Photo" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
-          Photo
-        </Link>
-        <Link href="/ArtWork" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
-          ArtWork
-        </Link>
-        <Link href="/Contact" className="flex-1 flex items-center justify-center text-2xl border-b-2 border-dashed hover:bg-gray-900 transition duration-300">
-          Contact
-        </Link>
+        <MobileMenuLink href="/" title="Home" onClick={closeMenu} />
+        <MobileMenuLink href="/Profile" title="Profile" onClick={closeMenu} />
+        <MobileMenuLink href="/Photo" title="Photo" onClick={closeMenu} />
+        <MobileMenuLink href="/ArtWork" title="ArtWork" onClick={closeMenu} />
+        <MobileMenuLink href="/Contact" title="Contact" onClick={closeMenu} />
       </nav>
       {/* オーバーレイ */}
       <div
         className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs ${
           isOpen ? "z-10" : "hidden"
         }`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={closeMenu}
       ></div>
     </div>
   );

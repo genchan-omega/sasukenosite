@@ -11,6 +11,7 @@ export default function Name() {
           alt="Picture of Author"
           fill
           className="object-cover"
+          property="true"
         />
       </div>
       <figcaption className="flex flex-col w-80 md:w-110">
