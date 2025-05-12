@@ -17,10 +17,10 @@ export default function SwiperViewer({
 }) {
 	return (
     <>
-      <button className="prev absolute top-1/2 left-0 -translate-y-1/2 h-24 w-24 text-6xl text-black transition duration-300 z-10 hover:cursor-pointer">
+      <button className="prev absolute top-1/2 left-0 h-24 w-24 text-6xl text-black transition duration-300 z-10 hover:cursor-pointer">
         〈
       </button>
-      <button className="next absolute top-1/2 right-0 -translate-y-1/2 h-24 w-24 text-6xl text-black transition duration-300 z-10 hover:cursor-pointer">
+      <button className="next absolute top-1/2 right-0 h-24 w-24 text-6xl text-black transition duration-300 z-10 hover:cursor-pointer">
         〉
       </button>
       <Swiper

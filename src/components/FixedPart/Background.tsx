@@ -14,6 +14,7 @@ export default function Background(props: Props) {
         fill
         alt="Picture of the article"
         className="object-cover"
+        priority
       />
     </div>
 	);
