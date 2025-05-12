@@ -10,8 +10,8 @@ import 'swiper/css';
 import 'swiper/css/autoplay'; 
 
 const images = [
-  "/Home/Slide/1.jpg",
   "/Home/Slide/2.jpg",
+  "/Home/Slide/1.jpg",
   "/Home/Slide/3.jpg",
   "/Home/Slide/4.jpg",
   "/Home/Slide/5.jpg",

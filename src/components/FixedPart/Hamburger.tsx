@@ -47,7 +47,7 @@ export default function Hamburger() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`} 
       >
-        <div className="flex items-center justify-end border-b-2 border-dashed pr-2"
+        <div className="flex items-center justify-end border-b-2 border-dashed"
         >
           <button
             className="text-5xl m-2 hover:bg-gray-700 transition duration-300 hover:cursor-pointer rounded-md"
