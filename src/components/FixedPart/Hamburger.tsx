@@ -46,6 +46,14 @@ export default function Hamburger() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`} 
       >
+        <div className="flex items-center justify-end border-dashed mr-2"
+        >
+          <button
+            className="text-5xl m-2 hover:bg-gray-700 transition duration-300 hover:cursor-pointer rounded-md"
+            onClick={() => setIsOpen(false)}>
+            &times;
+          </button>
+        </div>
         <Link href="/" className="flex-1 flex items-center justify-center text-2xl border-y-2 border-dashed hover:bg-gray-900 transition duration-300">
           Home
         </Link>

@@ -22,7 +22,7 @@ const images = [
 
 export default function Slide() {
   return (
-    <div className="w-screen h-[100dvh] relative z-0">
+    <div className="w-screen h-[100dvh] z-0 sticky top-0">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

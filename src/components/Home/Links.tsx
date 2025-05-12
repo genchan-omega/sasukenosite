@@ -76,12 +76,12 @@ export default function Links() {
 				gradient="bg-gradient-to-b from-black to-white"
 				imagePositions={[
 					{
-						src: "/Home/bird.jpg",
+						src: "/Home/bg_image/1.jpg",
 						className:
 							"top-1/4 left-2/3 -translate-x-1/4 -translate-y-2/3 w-64 h-64 rotate-12 border-2",
 					},
 					{
-						src: "/Home/bird.jpg",
+						src: "/Home/bg_image/2.jpg",
 						className: "top-3/5 left-1/6 w-64 h-64 -rotate-12 border-2",
 					},
 				]}
