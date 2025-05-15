@@ -4,7 +4,7 @@
 
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Field, Select } from "@headlessui/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +24,7 @@ const images = Object.entries(tagImageCounts).flatMap(([tag, count]) =>
 	Array.from({ length: count }, (_, i) => ({
 		src: `/Photo/${tag}/${i + 1}.jpg`,
 		tag,
-	}))
+	})) 
 );
 
 export default function Gallery() {
@@ -41,17 +41,14 @@ export default function Gallery() {
 	const [selectedImg, setSelectedImg] = useState<string | null>(null);
 	const [filter, setFilter] = useState<string>("All");
 
-// モーダル表示時は背景固定
-    useEffect(() => {
-        if (selectedImg) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [selectedImg]);
+	// モーダル表示時は背景固定
+  if (typeof window !== "undefined") {
+    if (selectedImg) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
 
 	return (
 		<section className="flex flex-col flex-1">
