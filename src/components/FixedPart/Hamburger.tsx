@@ -9,7 +9,9 @@ import MobileMenuLink from './MobileMenuLink';
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
-  const closeMenu = () => setIsOpen(false);
+  function handlecloseMenu(){
+    setIsOpen(false);
+  }
 
   return (
     <div className="relative">
@@ -47,26 +49,26 @@ export default function Hamburger() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`} 
       >
-        <div className="flex items-center justify-end border-b-2 border-dashed"
+        <div className="h-16 md:h-20 flex items-center justify-end border-b-2 border-dashed"
         >
           <button
-            className="text-5xl m-2 hover:bg-gray-700 transition duration-300 hover:cursor-pointer rounded-md"
+            className="text-4xl m-2 hover:bg-gray-700 transition duration-300 hover:cursor-pointer rounded-md"
             onClick={() => setIsOpen(false)}>
             &times;
           </button>
         </div>
-        <MobileMenuLink href="/" title="Home" onClick={closeMenu} />
-        <MobileMenuLink href="/Profile" title="Profile" onClick={closeMenu} />
-        <MobileMenuLink href="/Photo" title="Photo" onClick={closeMenu} />
-        <MobileMenuLink href="/ArtWork" title="ArtWork" onClick={closeMenu} />
-        <MobileMenuLink href="/Contact" title="Contact" onClick={closeMenu} />
+        <MobileMenuLink href="/" title="Home" onClick={handlecloseMenu} />
+        <MobileMenuLink href="/Profile" title="Profile" onClick={handlecloseMenu} />
+        <MobileMenuLink href="/Photo" title="Photo" onClick={handlecloseMenu} />
+        <MobileMenuLink href="/ArtWork" title="ArtWork" onClick={handlecloseMenu} />
+        <MobileMenuLink href="/Contact" title="Contact" onClick={handlecloseMenu} />
       </nav>
       {/* オーバーレイ */}
       <div
         className={`fixed top-0 left-0 w-full h-full backdrop-blur-xs ${
           isOpen ? "z-10" : "hidden"
         }`}
-        onClick={closeMenu}
+        onClick={handlecloseMenu}
       ></div>
     </div>
   );
