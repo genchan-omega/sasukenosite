@@ -4,7 +4,7 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Field, Select } from "@headlessui/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +24,7 @@ const images = Object.entries(tagImageCounts).flatMap(([tag, count]) =>
 	Array.from({ length: count }, (_, i) => ({
 		src: `/Photo/${tag}/${i + 1}.jpg`,
 		tag,
-	})) 
+	}))
 );
 
 export default function Gallery() {
@@ -42,13 +42,16 @@ export default function Gallery() {
 	const [filter, setFilter] = useState<string>("All");
 
 	// モーダル表示時は背景固定
-  if (typeof window !== "undefined") {
-    if (selectedImg) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }
+    useEffect(() => {
+        if (selectedImg) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [selectedImg]);
 
 	return (
 		<section className="flex flex-col flex-1">
@@ -96,48 +99,48 @@ export default function Gallery() {
 					className="fixed inset-0  bg-opacity-80 flex justify-center items-center z-[1000]"
 					onClick={() => setSelectedImg(null)}
 				>
-          {/* 背景部分 */}
+					{/* 背景部分 */}
 					<div
 						className="absolute inset-0 bg-black opacity-90"
 						onClick={() => setSelectedImg(null)}
 					/>
-          {/* Slide部分 */}
+					{/* Slide部分 */}
 					<div
 						className="relative w-11/12 h-5/6 z-10"
 						onClick={(e) => e.stopPropagation()}
 					>
-            {/* ボタン */}
-            <button
-              onClick={() => setSelectedImg(null)}
-              className="absolute top-4 right-4 z-10 text-white bg-opacity-60 rounded-2xl p-1 text-4xl hover:bg-gray-700 transition duration-150"
-            >
-              &times;
-            </button>
-            {/* ナビゲーションボタン */}
-            {/* PC用 */}
-            {/* <button className="hidden md:block prev absolute top-1/2 left-4 -translate-y-1/2 bg-gray-300 h-24 w-24 text-4xl text-gray-800 rounded-full hover:bg-gray-400 border-4 transition duration-300 z-10 opacity-50">
+						{/* ボタン */}
+						<button
+							onClick={() => setSelectedImg(null)}
+							className="absolute top-4 right-4 z-10 text-white bg-opacity-60 rounded-2xl p-1 text-4xl hover:bg-gray-700 transition duration-150"
+						>
+							&times;
+						</button>
+						{/* ナビゲーションボタン */}
+						{/* PC用 */}
+						{/* <button className="hidden md:block prev absolute top-1/2 left-4 -translate-y-1/2 bg-gray-300 h-24 w-24 text-4xl text-gray-800 rounded-full hover:bg-gray-400 border-4 transition duration-300 z-10 opacity-50">
               &lt;
             </button>
             <button className="hidden md:block next absolute top-1/2 right-4 -translate-y-1/2 bg-gray-300 h-24 w-24 text-4xl text-gray-800 rounded-full hover:bg-gray-400 border-4 transition duration-300 z-10 opacity-50">
               &gt;
             </button> */}
 
-            {/* スマホ用 */}
-            {/* <button className="block md:hidden prev absolute bottom-1/12 left-4 bg-gray-300 h-20 w-24 text-4xl text-gray-800 rounded-2xl hover:bg-gray-400 border-4 transition duration-300 z-10">
+						{/* スマホ用 */}
+						{/* <button className="block md:hidden prev absolute bottom-1/12 left-4 bg-gray-300 h-20 w-24 text-4xl text-gray-800 rounded-2xl hover:bg-gray-400 border-4 transition duration-300 z-10">
               &lt;
             </button>
             <button className="block md:hidden next absolute bottom-1/12 right-4 bg-gray-300 h-20 w-24 text-4xl text-gray-800 rounded-2xl hover:bg-gray-400 border-4 transition duration-300 z-10">
               &gt;
             </button> */}
-            {/* Slide */}
+						{/* Slide */}
 
-            {/* PC用 */}
-            <button className="prev absolute top-1/2 left-0 -translate-y-1/2 h-24 w-24 text-6xl text-white transition duration-300 z-10 hover:cursor-pointer">
-              〈
-            </button>
-            <button className="next absolute top-1/2 right-0 -translate-y-1/2 h-24 w-24 text-6xl text-white transition duration-300 z-10 hover:cursor-pointer">
-              〉
-            </button>
+						{/* PC用 */}
+						<button className="prev absolute top-1/2 left-0 -translate-y-1/2 h-24 w-24 text-6xl text-white transition duration-300 z-10 hover:cursor-pointer">
+							〈
+						</button>
+						<button className="next absolute top-1/2 right-0 -translate-y-1/2 h-24 w-24 text-6xl text-white transition duration-300 z-10 hover:cursor-pointer">
+							〉
+						</button>
 
 						<Swiper
 							modules={[Navigation]}
