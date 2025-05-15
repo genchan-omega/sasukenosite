@@ -1,3 +1,5 @@
+// /src/app/ArtWork/[slug]/page.tsx
+
 import Footer from "@/components/FixedPart/Footer";
 import Header from "@/components/FixedPart/Header";
 import Slide from "@/components/ArtWork/Slide";
