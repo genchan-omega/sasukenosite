@@ -149,14 +149,14 @@ export default function Gallery() {
             <button className="next absolute top-1/2 right-0 -translate-y-1/2 h-24 w-24 text-6xl text-white transition duration-300 z-10 hover:cursor-pointer">
               〉
             </button>
-
             <Swiper
               modules={[Navigation]}
               navigation={{ prevEl: ".prev", nextEl: ".next" }}
-              initialSlide={filteredImages.findIndex((img) => img.src === selectedImg)}
+              initialSlide={visibleImages.findIndex((img) => img.src === selectedImg)}
+              loop
               className="w-full h-full"
             >
-              {filteredImages.map((image, index) => (
+              {visibleImages.map((image, index) => ( // ✅ filteredImages → visibleImages に変更
                 <SwiperSlide key={index}>
                   <div className="relative h-full w-full flex flex-col items-center">
                     <div className="relative w-full h-full">
