@@ -1,3 +1,5 @@
+// /src/app/components/Home/Gallery.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -55,11 +57,23 @@ export default function Gallery() {
 
   // モーダル開閉時にスクロール制御
   useEffect(() => {
-    document.body.style.overflow = selectedImg ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
+    const preventScroll = (e: TouchEvent) => {
+      e.preventDefault();
     };
-  }, [selectedImg]);
+    if (selectedImg) {
+      document.body.style.overflow = "hidden";
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "";
+      document.removeEventListener("touchmove", preventScroll);
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+    document.removeEventListener("touchmove", preventScroll);
+  };
+}, [selectedImg]);
+
 
   return (
     <section className="flex flex-col flex-1">
@@ -156,7 +170,7 @@ export default function Gallery() {
               loop
               className="w-full h-full"
             >
-              {visibleImages.map((image, index) => ( // ✅ filteredImages → visibleImages に変更
+              {visibleImages.map((image, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative h-full w-full flex flex-col items-center">
                     <div className="relative w-full h-full">
