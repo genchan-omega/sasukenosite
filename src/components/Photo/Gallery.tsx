@@ -94,6 +94,7 @@ export default function Gallery() {
               className="object-cover w-full h-auto transition-transform duration-300 hover:scale-110"
               onClick={() => setSelectedImg(image.src)}
               loading="lazy"
+              placeholder="blur"
             />
           </div>
         ))}
