@@ -94,7 +94,6 @@ export default function Gallery() {
               className="object-cover w-full h-auto transition-transform duration-300 hover:scale-110"
               onClick={() => setSelectedImg(image.src)}
               loading="lazy"
-              placeholder="blur"
             />
           </div>
         ))}
@@ -116,9 +115,9 @@ export default function Gallery() {
                   setIsLoading(false);
                 }, 500);
               }}
-              className="w-full h-12 border-2 border-rose-300 bg-purple-300 hover:bg-purple-600 text-black hover:text-white text-xl rounded-md transition duration-300"
+              className="w-full h-12 border-2 border-rose-300 bg-purple-300 hover:bg-purple-600 text-black hover:text-white text-3xl rounded-md transition duration-300"
             >
-              もっと見る
+              See more
             </button>
           )}
         </div>
