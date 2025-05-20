@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Field, Select } from "@headlessui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { SyncLoader } from "react-spinners";
 import "swiper/css/bundle";
 
 // --- 全画像データ ---
@@ -28,11 +29,11 @@ export default function Gallery() {
   const tags = ["All", "Landscape", "Overseas", "Snap", "Animals", "Birds", "Nature"];
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const [filter, setFilter] = useState<string>("All");
+  const [isLoading, setIsLoading] = useState(false);
 
   // ページネーションと無限スクロール
   const [visibleImages, setVisibleImages] = useState<typeof allImages>([]);
   const [page, setPage] = useState(1);
-  const loader = useRef<HTMLDivElement | null>(null);
   const itemsPerPage = 15;
 
   // 🔧 useMemoでフィルター済み画像をキャッシュ
@@ -51,25 +52,6 @@ export default function Gallery() {
     if (page === 1) return;
     setVisibleImages(filteredImages.slice(0, page * itemsPerPage));
   }, [page, filteredImages]);
-
-  // IntersectionObserver でスクロール検知
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const first = entries[0];
-        if (first.isIntersecting && visibleImages.length < filteredImages.length) {
-          setPage((prev) => prev + 1);
-        }
-      },
-      { threshold: 1 }
-    );
-
-    const current = loader.current;
-    if (current) observer.observe(current);
-    return () => {
-      if (current) observer.unobserve(current);
-    };
-  }, [visibleImages, filteredImages]);
 
   // モーダル開閉時にスクロール制御
   useEffect(() => {
@@ -119,10 +101,30 @@ export default function Gallery() {
 
       {/* ローディングトリガー */}
       {visibleImages.length < filteredImages.length && (
-        <div ref={loader} className="text-center py-4 text-gray-500">
-          Loading more images...
+        <div className="w-full md:w-[60vw] p-4 mx-auto flex flex-col items-center gap-4">
+          {isLoading ? (
+            <div className="w-full h-12 flex justify-center items-center border-2 border-rose-300 bg-purple-600 text-white text-xl rounded-md transition duration-300">
+              <SyncLoader color="#fff" />
+            </div>
+          ) : (
+            <button
+              onClick={() => {
+                setIsLoading(true);
+                setTimeout(() => {
+                  setPage((prev) => prev + 1);
+                  setIsLoading(false);
+                }, 500);
+              }}
+              className="w-full h-12 border-2 border-rose-300 bg-purple-300 hover:bg-purple-600 text-black hover:text-white text-xl rounded-md transition duration-300"
+            >
+              もっと見る
+            </button>
+          )}
         </div>
       )}
+
+
+
 
       {/* モーダル（元のコード維持でOK） */}
       {selectedImg && (

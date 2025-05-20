@@ -42,12 +42,13 @@ export default function Gallery() {
 	const [filter, setFilter] = useState<string>("All");
 
 	// モーダル表示時は背景固定
-  useEffect(() => {
-    document.body.style.overflow = selectedImg ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selectedImg]);
+  // DOM操作なのでuseEffect許される...はず
+	useEffect(() => {
+		document.body.style.overflow = selectedImg ? "hidden" : "";
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [selectedImg]);
 
 	return (
 		<section className="flex flex-col flex-1">
@@ -83,7 +84,7 @@ export default function Gallery() {
 								fill
 								className="object-cover w-full h-auto transition-transform duration-300 hover:scale-110"
 								onClick={() => setSelectedImg(image.src)}
-                loading="eager"
+								loading="eager"
 							/>
 						</div>
 					))}
