@@ -13,6 +13,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.2",
     "@splidejs/react-splide": "^0.7.12",
+    "@tanstack/react-virtual": "^3.13.8",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
